@@ -61,7 +61,7 @@ class QuestionairFormState extends State<QuestionairForm> {
                       return null;
                     },
                     decoration:
-                        InputDecoration(hintText: 'Enter your Answer ?'),
+                        const InputDecoration(hintText: 'Enter your Answer ?'),
                   ),
                   RaisedButton(
                     onPressed: () {
@@ -70,15 +70,15 @@ class QuestionairFormState extends State<QuestionairForm> {
                         // If the form is valid, display a snackbar. In the real world,
                         // you'd often call a server or save the information in a database.
 
-                        Scaffold.of(context).showSnackBar(
-                            SnackBar(content: Text('Processing Data...')));
+                        Scaffold.of(context).showSnackBar(const SnackBar(
+                            content: Text('Processing Data...')));
                         final questionBloc =
                             BlocProvider.of<QuestionairBloc>(context);
                         _formKey.currentState.save();
                         questionBloc.question.add(this.formInput);
                       }
                     },
-                    child: Text('Submit'),
+                    child: const Text('Submit'),
                   ),
                 ]))));
   }
