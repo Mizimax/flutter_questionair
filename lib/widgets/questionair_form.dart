@@ -78,7 +78,7 @@ class QuestionairFormState extends State<QuestionairForm> {
                         questionBloc.question.add(this.formInput);
                       }
                     },
-                    child: Text('Submit'),
+                    child: const Text('Submit'),
                   ),
                 ]))));
   }
