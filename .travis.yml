@@ -16,9 +16,9 @@ cache:
   directories:
   - flutter
   - $HOME/.pub-cache
-jobs:
+matrix:
   include:
   - name: Test
-      env: COMMAND=test
+    env: COMMAND=test
   - name: Analyze
-      env: COMMAND=analyze
+    env: COMMAND=analyze
